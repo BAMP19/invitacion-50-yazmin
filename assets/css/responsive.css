@@ -97,3 +97,92 @@ body {
     }
 
 }
+/* =========================================
+   AJUSTE DEFINITIVO DEL SOBRE EN CELULAR
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .sobre-animado {
+        width: 84vw !important;
+        max-width: 420px !important;
+        aspect-ratio: 1.35 / 1 !important;
+
+        left: 50% !important;
+        top: 47% !important;
+
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .texto-solapa {
+        top: 27% !important;
+        width: 82% !important;
+    }
+
+    .sr {
+        font-size: 10px !important;
+        letter-spacing: 2.5px !important;
+    }
+
+    .nombre {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: 27px !important;
+        line-height: 1.05 !important;
+
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    .abrir {
+        margin-top: 15px !important;
+        font-size: 9px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .sello-sobre {
+        width: 68px !important;
+        height: 68px !important;
+
+        left: 50% !important;
+        top: 65% !important;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .sobre-animado {
+        width: 88vw !important;
+        max-width: 350px !important;
+        top: 47% !important;
+    }
+
+    .texto-solapa {
+        top: 25% !important;
+        width: 84% !important;
+    }
+
+    .nombre {
+        font-size: 24px !important;
+    }
+
+    .abrir {
+        margin-top: 12px !important;
+        font-size: 8px !important;
+    }
+
+    .sello-sobre {
+        width: 62px !important;
+        height: 62px !important;
+    }
+}
