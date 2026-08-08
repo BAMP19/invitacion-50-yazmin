@@ -278,6 +278,14 @@ const invitados = {
     A056: {
         tipo: "familia",
         nombre: "Gaviria"
+    },
+     A057: {
+        tipo: "senora",
+        nombre: "Marina Salazar"
+    },
+     A058: {
+        tipo: "senor",
+        nombre: "Heiber"
     }
 
 };
