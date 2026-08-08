@@ -399,34 +399,127 @@
 /* =====================================
    CELULAR
 ===================================== */
+/* =====================================
+   CELULAR
+===================================== */
 
 @media (max-width: 600px) {
 
     .sobre-animado {
 
-        width: 88vw;
+        /*
+           Un poco más pequeño que antes
+           para que respire en la pantalla.
+        */
+        width: 84vw;
 
+        max-width: 420px;
+
+        aspect-ratio: 1.35 / 1;
+
+        /*
+           Lo subimos ligeramente.
+        */
+        top: 47%;
     }
 
+
+    /* ================================
+       TEXTO DEL SOBRE
+    ================================= */
 
     .texto-solapa {
 
         top: 27%;
 
+        width: 82%;
+    }
+
+
+    .sr {
+
+        font-size: clamp(
+            9px,
+            2.4vw,
+            13px
+        );
+
+        letter-spacing: 2.5px;
     }
 
 
     .nombre {
 
-        max-width: 90%;
+        width: 100%;
+
+        max-width: 100%;
 
         margin-left: auto;
         margin-right: auto;
 
-        overflow: hidden;
+        font-size: clamp(
+            25px,
+            6vw,
+            31px
+        );
 
-        text-overflow: ellipsis;
+        line-height: 1.05;
 
+        /*
+           Permitimos que nombres largos
+           pasen a una segunda línea.
+        */
+        white-space: normal;
+
+        overflow-wrap: break-word;
+
+        word-break: normal;
+
+        text-overflow: clip;
+
+        overflow: visible;
+    }
+
+
+    /* ================================
+       TOQUE PARA ABRIR
+    ================================= */
+
+    .abrir {
+
+        margin-top: 15px;
+
+        font-size: clamp(
+            8px,
+            2vw,
+            11px
+        );
+
+        letter-spacing: 2px;
+    }
+
+
+    /* ================================
+       SELLO
+    ================================= */
+
+    .sello-sobre {
+
+        width: clamp(
+            62px,
+            15vw,
+            78px
+        );
+
+        height: clamp(
+            62px,
+            15vw,
+            78px
+        );
+
+        left: 50%;
+
+        top: 65%;
     }
 
 }
@@ -440,8 +533,11 @@
 
     .sobre-animado {
 
-        width: 92vw;
+        width: 88vw;
 
+        max-width: 350px;
+
+        top: 47%;
     }
 
 
@@ -449,6 +545,23 @@
 
         top: 25%;
 
+        width: 84%;
+    }
+
+
+    .sr {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .nombre {
+
+        font-size: 24px;
+
+        line-height: 1.05;
     }
 
 
@@ -456,6 +569,19 @@
 
         margin-top: 12px;
 
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .sello-sobre {
+
+        width: 62px;
+
+        height: 62px;
+
+        top: 65%;
     }
 
 }
