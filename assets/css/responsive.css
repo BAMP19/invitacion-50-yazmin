@@ -1,0 +1,104 @@
+/* =========================================
+   RESPONSIVE GENERAL
+========================================= */
+
+html,
+body {
+
+    width: 100%;
+
+    min-height: 100%;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   CELULAR HORIZONTAL
+========================================= */
+
+@media
+(max-width: 900px)
+and (orientation: landscape) {
+
+    .sobre-animado {
+
+        width: 55vw;
+
+    }
+
+
+    .tarjeta-salida {
+
+        width: 55vw;
+
+        height: 92dvh;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR VERTICAL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .escena-sobre {
+
+        height: 100dvh;
+
+        min-height: 100dvh;
+
+    }
+
+
+    .sobre-animado {
+
+        width: 88vw;
+
+    }
+
+
+    .tarjeta-salida {
+
+        width: 88vw;
+
+        height: 90dvh;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR MUY PEQUEÑO
+========================================= */
+
+@media (max-width: 360px) {
+
+    .sobre-animado {
+
+        width: 92vw;
+
+    }
+
+
+    .tarjeta-salida {
+
+        width: 92vw;
+
+        height: 91dvh;
+
+    }
+
+}

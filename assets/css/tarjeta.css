@@ -1,0 +1,695 @@
+/* =========================================
+   TARJETA EXTERIOR
+========================================= */
+
+.tarjeta-salida {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: min(460px, 86vw);
+
+    /*
+       Mantiene exactamente
+       la proporción vertical
+    */
+    aspect-ratio: 2 / 3;
+
+    height: auto;
+
+    transform:
+        translate(-50%, 110vh);
+
+    opacity: 0;
+
+    z-index: 10;
+
+    transition:
+        transform 1.15s cubic-bezier(.16,1,.3,1),
+        opacity .6s ease;
+
+}
+
+
+/* =========================================
+   TARJETA VISIBLE
+========================================= */
+
+.tarjeta-salida.tarjeta-visible {
+
+    transform:
+        translate(-50%, -50%);
+
+    opacity: 1;
+
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.tarjeta {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+   
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #fff8ef,
+            #f1ddc8
+        );
+
+    box-shadow:
+
+        0 25px 70px
+        rgba(70,40,20,.28);
+
+}
+
+
+/* =========================================
+   TEXTURA DE PAPEL
+========================================= */
+
+.textura-tarjeta {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+       Se adapta exactamente
+       a la tarjeta
+    */
+    object-fit: cover;
+
+    object-position: center;
+
+    opacity: .16;
+
+    mix-blend-mode: multiply;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   MARCO
+========================================= */
+
+.marco-tarjeta {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+       Como la tarjeta mantiene
+       2:3, el marco conserva
+       sus proporciones.
+    */
+    object-fit: fill;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================
+   ÁREA SEGURA DEL TEXTO
+========================================= */
+
+.contenido-tarjeta {
+
+    position: absolute;
+
+
+    top: 13%;
+    right: 15%;
+    bottom: 12%;
+    left: 15%;
+
+    box-sizing: border-box;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    color: #5e3b2a;
+
+    overflow: hidden;
+
+}
+
+/* =========================================
+   TITULO
+========================================= */
+
+.titulo-tarjeta {
+
+    width: 100%;
+    transform: translateX(3%);
+
+    margin-top: 14px;
+
+    margin-bottom: 0;
+
+    padding: 0;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(8px, 1.8vw, 13px);
+
+    line-height: 1.2;
+
+    letter-spacing:
+        clamp(1.5px, .45vw, 3px);
+
+    flex-shrink: 0;
+
+}
+
+/* =========================================
+   NUMERO 50
+========================================= */
+
+.numero-50 {
+
+    width:
+        clamp(100px, 30%, 165px);
+
+    height: auto;
+
+    max-height: 24%;
+
+    object-fit: contain;
+
+    margin-top:
+        clamp(5px, 2vh, 3px);
+
+    flex-shrink: 1;
+
+    filter:
+        drop-shadow(
+            0 5px 7px
+            rgba(80,40,20,.16)
+        );
+
+}
+
+
+/* =========================================
+   AÑOS
+========================================= */
+
+.texto-anos {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(28px, 6vw, 30px);
+
+    line-height: .85;
+
+    letter-spacing:
+        clamp(3px, .8vw, 7px);
+
+    margin-top: 2px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   DE
+========================================= */
+
+.de {
+    transform: translateX(-30%);
+
+    font-family:
+        'Great Vibes',
+        cursive;
+
+    font-size:
+        clamp(20px, 4.5vw, 32px);
+
+    line-height: .9;
+
+    margin-top: 5px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   NOMBRE YAZMIN
+========================================= */
+
+.nombre-cumple {
+
+    width: 100%;
+    transform: translateX(-4%);
+
+    font-family:
+        'Great Vibes',
+        cursive;
+
+    font-size:
+        clamp(30px, 7vw, 50px);
+
+    line-height: .95;
+
+    color: #8d4c3b;
+
+    margin-top: 2px;
+
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+
+}
+
+
+/* =========================================
+   INVITADO
+========================================= */
+
+.bloque-invitado {
+
+    width: 86%;
+
+    margin-top:
+        clamp(10px, 1.8vh, 17px);
+
+    padding-top:
+        clamp(7px, 1.2vh, 12px);
+
+    border-top:
+        1px solid
+        rgba(160,110,60,.55);
+
+    flex-shrink: 0;
+
+}
+
+
+.bloque-invitado p {
+
+    margin: 0;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(7px, 1.4vw, 10px);
+
+    letter-spacing:
+        clamp(1.5px, .35vw, 3px);
+
+    line-height: 1.1;
+
+}
+
+
+.bloque-invitado h2 {
+
+    margin:
+        5px 0 0;
+
+    font-family:
+        'Great Vibes',
+        cursive;
+
+    font-size:
+        clamp(21px, 5vw, 25px);
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    color: #704633;
+
+   
+    white-space: normal;
+
+    overflow-wrap: break-word;
+
+    word-break: normal;
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================
+   MENSAJE
+========================================= */
+
+.mensaje {
+
+    width: 94%;
+
+    margin-top:
+        clamp(8px, 1.4vh, 14px);
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(7px, 1.35vw, 10px);
+
+    line-height: 1.35;
+
+    text-align: center;
+
+    /*
+       El texto se adapta
+       al ancho disponible
+    */
+
+    overflow-wrap: break-word;
+
+    word-break: normal;
+
+    white-space: normal;
+
+    flex-shrink: 1;
+
+}
+
+
+/* =========================================
+   INFORMACIÓN
+========================================= */
+
+.informacion {
+
+    width: 90%;
+
+    margin-top:
+        clamp(8px, 2vh, 16px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap:
+        clamp(4px, 1vh, 8px);
+
+    flex-shrink: 1;
+
+}
+
+
+.dato {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 1px;
+
+}
+
+
+.dato strong {
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(7px, 1.3vw, 10px);
+
+    line-height: 1;
+
+    letter-spacing:
+        clamp(1px, .25vw, 2px);
+
+    color: #a04e42;
+
+}
+
+
+.dato span {
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(7px, 1.3vw, 9px);
+
+    line-height: 1.15;
+
+}
+
+
+
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .tarjeta-salida {
+
+        width: 88vw;
+
+    }
+
+
+    .contenido-tarjeta {
+
+        top: 7%;
+        right: 8%;
+        bottom: 7%;
+        left: 8%;
+
+    }
+
+
+    .numero-50 {
+
+        width: 31%;
+
+    }
+
+
+    .mensaje {
+
+        width: 94%;
+
+    }
+
+
+    .informacion {
+
+        width: 94%;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+========================================= */
+
+@media (max-width: 380px) {
+
+    .tarjeta-salida {
+
+        width: 91vw;
+
+    }
+
+
+    .contenido-tarjeta {
+
+        top: 6.5%;
+        right: 7%;
+        bottom: 6.5%;
+        left: 7%;
+
+    }
+
+
+    .titulo-tarjeta {
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .numero-50 {
+
+        width: 28%;
+
+        margin-top: 7px;
+
+    }
+
+
+    .texto-anos {
+
+        font-size: 27px;
+
+    }
+
+
+    .nombre-cumple {
+
+        font-size: 30px;
+
+    }
+
+
+    .mensaje {
+
+        font-size: 7px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .dato strong {
+
+        font-size: 7px;
+
+    }
+
+
+    .dato span {
+
+        font-size: 7px;
+
+    }
+
+}
+@media (max-width: 600px) {
+
+    .contenido-tarjeta {
+
+        top: 13%;
+        right: 14%;
+        bottom: 12%;
+        left: 14%;
+
+    }
+
+
+    .titulo-tarjeta {
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .numero-50 {
+
+        width: 28%;
+
+        margin-top: 8px;
+
+    }
+
+
+    .texto-anos {
+
+        font-size: 28px;
+
+    }
+
+
+    .nombre-cumple {
+
+        font-size: 32px;
+
+    }
+
+
+    .bloque-invitado h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .mensaje {
+
+        width: 96%;
+
+        font-size: 7px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .dato strong {
+
+        font-size: 7px;
+
+    }
+
+
+    .dato span {
+
+        font-size: 7px;
+
+    }
+
+}

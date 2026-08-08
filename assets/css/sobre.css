@@ -1,0 +1,461 @@
+/* =====================================
+   ESCENA DEL SOBRE
+===================================== */
+
+.escena-sobre {
+
+    position: relative;
+
+    width: 100%;
+    height: 100dvh;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fff9f2 0%,
+            #f4dfca 55%,
+            #e8c5a8 100%
+        );
+
+}
+
+
+/* =====================================
+   SOBRE
+===================================== */
+
+.sobre-animado {
+
+    position: absolute;
+
+    width: min(590px, 88vw);
+
+    aspect-ratio: 1.35 / 1;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    filter:
+        drop-shadow(
+            0 25px 35px
+            rgba(80,45,25,.25)
+        );
+
+    transition:
+        transform 1s ease,
+        opacity 1s ease;
+
+}
+
+
+/* =====================================
+   CUERPO
+===================================== */
+
+.cuerpo-sobre {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #faf0e5,
+            #e8cdb4
+        );
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================
+   TEXTURA
+===================================== */
+
+.cuerpo-sobre::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("../img/textura-papel.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: .07;
+
+    mix-blend-mode: multiply;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================
+   BORDE
+===================================== */
+
+.cuerpo-sobre::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border:
+
+        1px solid
+        rgba(183,132,61,.55);
+
+    border-radius: 8px;
+
+}
+
+
+/* =====================================
+   SOLAPA
+===================================== */
+
+.solapa-sobre {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 70%;
+
+    z-index: 10;
+
+    transform-origin: top center;
+
+    transition:
+        transform 1s
+        cubic-bezier(.2,.8,.2,1);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #fff7ec,
+            #ecd3bb
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    box-shadow:
+        0 5px 12px
+        rgba(80,40,20,.14);
+
+}
+
+
+/* =====================================
+   TEXTURA SOLAPA
+===================================== */
+
+.solapa-sobre::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("../img/textura-papel.png");
+
+    background-size: cover;
+
+    opacity: .08;
+
+    mix-blend-mode: multiply;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================
+   TEXTO
+===================================== */
+
+.texto-solapa {
+
+    position: absolute;
+
+    top: 28%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 82%;
+
+    text-align: center;
+
+    color: #70452f;
+
+    z-index: 5;
+
+}
+
+
+.sr {
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(10px, 1.8vw, 15px);
+
+    letter-spacing:
+        clamp(3px, .5vw, 5px);
+
+}
+
+
+.nombre {
+
+    margin-top: 8px;
+
+    font-family:
+        'Great Vibes',
+        cursive;
+
+    font-size:
+        clamp(28px, 5vw, 30px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+
+}
+
+
+.abrir {
+
+    margin-top: 18px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:
+        clamp(9px, 1.5vw, 12px);
+
+    letter-spacing:
+        clamp(1.5px, .35vw, 3px);
+
+    opacity: .8;
+
+}
+
+
+/* =====================================
+   SELLO
+===================================== */
+
+.sello-sobre {
+
+    position: absolute;
+
+    width:
+        clamp(65px, 9vw, 92px);
+
+    height:
+        clamp(65px, 9vw, 92px);
+
+    left: 50%;
+    top: 65%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 30;
+
+    filter:
+        drop-shadow(
+            0 7px 8px
+            rgba(60,30,10,.3)
+        );
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+
+}
+
+
+/* =====================================
+   EFECTO AL PASAR EL MOUSE
+===================================== */
+
+.sobre-animado:hover {
+
+    transform:
+        translate(-50%, -50%)
+        translateY(-6px);
+
+}
+
+
+/* =====================================
+   SOLAPA ABIERTA
+===================================== */
+
+.sobre-abierto .solapa-sobre {
+
+    transform:
+        rotateX(180deg);
+
+}
+
+
+.sobre-abierto .sello-sobre {
+
+    transform:
+        translate(-50%, -50%)
+        scale(.7);
+
+    opacity: 0;
+
+}
+
+
+/* =====================================
+   RETIRAR SOBRE
+===================================== */
+
+
+.sobre-retirado {
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.96);
+
+    pointer-events: none;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .sobre-animado {
+
+        width: min(560px, 84vw);
+
+    }
+
+}
+
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 600px) {
+
+    .sobre-animado {
+
+        width: 88vw;
+
+    }
+
+
+    .texto-solapa {
+
+        top: 27%;
+
+    }
+
+
+    .nombre {
+
+        max-width: 90%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+    }
+
+}
+
+
+/* =====================================
+   CELULAR PEQUEÑO
+===================================== */
+
+@media (max-width: 380px) {
+
+    .sobre-animado {
+
+        width: 92vw;
+
+    }
+
+
+    .texto-solapa {
+
+        top: 25%;
+
+    }
+
+
+    .abrir {
+
+        margin-top: 12px;
+
+    }
+
+}
