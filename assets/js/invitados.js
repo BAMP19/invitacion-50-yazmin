@@ -299,4 +299,8 @@ A061: {
         tipo: "senorFamilia",
         nombre: "Jhon Jairo"
     },
+A062: {
+        tipo: "senorFamilia",
+        nombre: "Reynaldo"
+    },
 };
