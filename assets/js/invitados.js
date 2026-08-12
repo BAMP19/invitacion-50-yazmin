@@ -303,4 +303,12 @@ A062: {
         tipo: "senorFamilia",
         nombre: "Reynaldo"
     },
+A063: {
+        tipo: "senorFamilia",
+        nombre: "Hiller"
+    },
+A064: {
+        tipo: "senoraFamilia",
+        nombre: "Luz"
+    },
 };
